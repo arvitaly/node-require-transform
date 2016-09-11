@@ -1,7 +1,7 @@
 {
   "name": "node-require-transform",
   
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Library for regenerate source file with rewrite require-function body",
   "main": "index.js",
   "scripts": {
