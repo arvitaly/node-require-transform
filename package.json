@@ -1,0 +1,30 @@
+{
+  "name": "require-transform",
+  "version": "1.0.0",
+  "description": "Library for regenerate source file with rewrite require-function body",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover node_modules/jasmine/bin/jasmine.js",
+    "watch:test": "nodemon --exec \"npm test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvitaly/node-require-transform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arvitaly/node-require-transform/issues"
+  },
+  "homepage": "https://github.com/arvitaly/node-require-transform#readme",
+  "dependencies": {
+    "escodegen": "^1.8.1",
+    "esprima": "^3.0.0"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.12",
+    "istanbul": "^0.4.5",
+    "jasmine": "^2.4.1"
+  }
+}
