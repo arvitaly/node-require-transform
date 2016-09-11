@@ -1,7 +1,7 @@
 {
   "name": "node-require-transform",
-  
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "typings": "./typings.d.ts",
   "description": "Library for regenerate source file with rewrite require-function body",
   "main": "index.js",
   "scripts": {
