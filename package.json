@@ -1,6 +1,7 @@
 {
-  "name": "require-transform",
-  "version": "1.0.0",
+  "name": "node-require-transform",
+  
+  "version": "0.0.1",
   "description": "Library for regenerate source file with rewrite require-function body",
   "main": "index.js",
   "scripts": {
@@ -20,7 +21,8 @@
   "homepage": "https://github.com/arvitaly/node-require-transform#readme",
   "dependencies": {
     "escodegen": "^1.8.1",
-    "esprima": "^3.0.0"
+    "esprima": "^3.0.0",
+    "esprima-walk": "^0.1.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.12",
