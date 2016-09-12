@@ -1,6 +1,6 @@
 {
   "name": "node-require-transform",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "typings": "./typings.d.ts",
   "description": "Library for regenerate source file with rewrite require-function body",
   "main": "index.js",
@@ -22,7 +22,7 @@
   "dependencies": {
     "acorn": "^4.0.2",
     "escodegen": "^1.8.1",
-    "esprima-walk": "^0.1.0"
+    "estree-walker": "^0.2.1"
   },
   "devDependencies": {
     "coveralls": "^2.11.12",
