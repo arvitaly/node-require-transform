@@ -7,11 +7,9 @@ module.exports = function (source, callback) {
         enter: function (node) {
             if (node.type == "CallExpression") {
                 if (node.callee.type == "Identifier" && node.callee.name == "require") {
-                    var res = callback(node.arguments.map((l) => {
-                        return l.value;
-                    }));
-                    for (var i = 0; i < res.length; i++) {
-                        node.arguments[i] = { type: "Literal", value: res[i], raw: "'" + res[i] + "'" };
+                    var res = callback(node.arguments);
+                    if (res) {
+                        node.arguments = res;
                     }
                 }
             }
