@@ -1,19 +1,20 @@
-var walk = require('estree-walker').walk;
-var acorn = require('acorn');
-var escodegen = require('escodegen');
+var babel = require('babel-core');
 module.exports = function (source, callback) {
-    var ast = acorn.parse(source);
-    walk(ast, {
-        enter: function (node) {
-            if (node.type == "CallExpression") {
-                if (node.callee.type == "Identifier" && node.callee.name == "require") {
-                    var res = callback(node.arguments);
-                    if (res) {
-                        node.arguments = res;
+    return babel.transform(source, {
+        plugins: [function ({ types: t }) {
+            return {
+                visitor: {
+                    CallExpression(path) {
+                        if (!path.isCallExpression()) return false;
+                        if (!path.get("callee").isIdentifier({ name: "require" })) return false;
+                        if (path.scope.getBinding("require")) return false;
+                        var res = callback(path.node.arguments);
+                        if (res) {
+                            path.node.arguments = res;
+                        }
                     }
                 }
             }
-        }
-    })
-    return escodegen.generate(ast);
+        }]
+    }).code;
 }

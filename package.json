@@ -1,6 +1,6 @@
 {
   "name": "node-require-transform",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "typings": "./typings.d.ts",
   "description": "Library for regenerate source file with rewrite require-function body",
   "main": "index.js",
@@ -20,14 +20,12 @@
   },
   "homepage": "https://github.com/arvitaly/node-require-transform#readme",
   "dependencies": {
-    "acorn": "^4.0.2",
-    "escodegen": "^1.8.1",
-    "estree-walker": "^0.2.1"
+    "babel-core": "^6.14.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.12",
     "fixture2": "0.0.3",
     "istanbul": "^0.4.5",
-    "jasmine": "^2.4.1"
+    "jasmine": "2.4.1"
   }
 }

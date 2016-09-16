@@ -3,10 +3,10 @@ var f = require('fixture2')();
 it("when require string, should call callback and change to result", () => {
     var cb = jasmine.createSpy();
     cb.and.callFake((args) => {
-        if (args[0].type == "Literal") {
+        if (args[0].type == "StringLiteral") {
             return [
-                f("arg1", { type: "Literal", value: f("request1"), raw: "'" + f("request1") + "'" }),
-                f("arg2", { type: "Literal", value: f("request2"), raw: "'" + f("request2") + "'" })
+                f("arg1", { type: "StringLiteral", value: f("request1"), raw: "'" + f("request1") + "'" }),
+                f("arg2", { type: "StringLiteral", value: f("request2"), raw: "'" + f("request2") + "'" })
             ];
         }
     });
