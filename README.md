@@ -1,4 +1,6 @@
 # node-require-transform
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/arvitaly/node-require-transform.svg)](https://greenkeeper.io/)
 Library for regenerate source file with rewrite require-function body
 
 [![npm version](https://badge.fury.io/js/node-require-transform.svg)](https://badge.fury.io/js/node-require-transform)
